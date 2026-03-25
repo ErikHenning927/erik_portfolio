@@ -34,7 +34,11 @@
 						<header class="major">
 							<h2>Sobre mim</h2>
 						</header>
-						<p>Profissional de tecnologia com sólida experiência em integração de APIs, desenvolvimento de pipelines ETL em Python e automação de processos. Atuo com construção de microserviços, aplicações web, e orquestração de fluxos com Airflow. Tenho foco em soluções escaláveis que melhoram a eficiência operacional e a visibilidade de dados, especialmente em ambientes de e-commerce.</p>
+						<p>Desenvolvedor Sênior especializado em Automação e Inteligência Artificial, com sólida experiência em Python, Engenharia de Dados e integração de sistemas corporativos de grande escala.
+
+Atuação com foco em desenvolvimento de soluções de IA/ML, orquestração de pipelines com Apache Airflow, APIs REST, Docker e Cloud (GCP/AWS). Experiência prática em ambientes produtivos de alto volume, integração com SAP, VTEX, e-commerce e automação de fluxos críticos de dados.
+
+Perfil orientado a resultados, com visão estratégica para aplicação de tecnologias emergentes, incluindo Large Language Models (LLMs), RAG (Retrieval-Augmented Generation) e automação inteligente de processos.</p>
 					</section>
 					<!-- Two -->
 					<section id="two" class="mt-4">
@@ -48,10 +52,12 @@
 									<ul>
 										<li>Apache Airflow</li>
 										<li>dbt</li>
-										<li>Docker</li>
 										<li>Git</li>
-										<li>Power BI</li>
+										<li>LLMs</li>
+										<li>RAG (Retrieval-Augmented Generation)</li>
+										<li>APIs REST / GraphQL</li>
 										<li>Streamlit</li>
+										<li>Django</li>
 										<li>Repositórios de código: Github e Bitbucket</li>
 									</ul>
 								</div>
@@ -61,15 +67,21 @@
 									<h3><span class="icon solid fa-bookmark"></span> Linguagens</h3>
 									<ul>
 										<li>Python</li>
+										<li>Node.JS</li>
 										<li>SQL</li>
 									</ul>
 								</div>
 							</article>
 							<article class="p-2">
 								<div class="content">
-									<h3><span class="icon solid fa-bookmark"></span> Cloud</h3>
+									<h3><span class="icon solid fa-bookmark"></span>Cloud & DevOps</h3>
 									<ul>
 										<li>Google Cloud Plataform</li>
+										<li>AWS</li>
+										<li>CI-CD</li>
+										<li>Docker</li>
+										<li>Kubernetes</li>
+										<li>Webhooks</li>
 									</ul>
 								</div>
 							</article>
@@ -83,17 +95,17 @@
 					<div class="features">
 						<article>
 							<div class="content">
-								<h3></span> Analista de Sistemas Sênior - Britânia Eletrodomésticos</h3>
+								<h3></span> Desenvolvedor Sênior - Automação e IA - Britânia Eletrodomésticos</h3>
 								<h3></span> Janeiro 2024 - Atualmente </h3>
 								<ul>
-									<li>Desenvolvimento de APIs e automações com Python para integrar sistemas como SAP e VTEX.</li>
-									<li>Criação de APIs oData no ambiente SAP Commerce</li>
-									<li>Construção e orquestração de pipelines ETL usando Airflow, com foco em escalabilidade e monitoramento.</li>
-									<li>Extração e transformação de dados, com normalização de tabelas SQL.</li>
-									<li>Implementação de integrações baseadas em webhooks para ingestão de eventos em tempo real</li>
-									<li>Manipulação de dados utilizando bibliotecas Python, como Pandas, e transformação de dados em Data Warehouses com SQL.</li>
-									<li>Atuação estratégica em projetos de dados, garantindo consistência, padronização e performance dos fluxos</li>
-									<li>Versionamento de código utilizando Git e Github.</li>
+									<li>Desenvolvimento de soluções de automação com IA para otimização de processos corporativos.</li>
+									<li>Criação de APIs REST em Python para integração entre sistemas (SAP, VTEX, parceiros externos)</li>
+									<li>Implementação de pipelines ETL escaláveis com Apache Airflow, incluindo monitoramento e tratamento de falhas</li>
+									<li>Desenvolvimento de integrações baseadas em webhooks para ingestão de eventos em tempo real</li>
+									<li>Aplicação de LLMs e técnicas de prompt engineering para automação inteligente de tarefas</li>
+									<li>Modelagem e normalização de dados em SQL Server e PostgreSQL, garantindo alta performance e consistência</li>
+									<li>Redução significativa de tempo operacional através da automação de processos críticos</li>
+									<li>Atuação estratégica junto às áreas de negócio e tecnologia na definição de soluções data-driven</li>
 								</ul>
 							</div>
 						</article>
@@ -114,6 +126,38 @@
 					<section id="four">
 						<h2>Projetos</h2>
 						<div class="row">
+							<!-- Projeto frameworks-->
+							<article class="col-6 col-12-xsmall work-item">
+								<h2>Construção de agentes utilizando os frameworks (CrewAI, LangGraph e Pydantic)</h2>
+								<a href="images/fulls/agent.png" class="image fit thumb"><img src="images/fulls/agent.png" alt="" /></a>
+								<section>
+									<h3>Objetivos</h3>
+										<ul>
+											<li>Desenvolvi 3 agentes de IA usando abordagens diferentes para comparar como cada um constrói o raciocínio: CrewAI, LangGraph e uma implementação baseada em Pydantic.
+Pydantic (baseado em schema)
+Output direto e bem estruturado. Cumpre o papel de organizar a resposta, mas fica raso na análise. Cita categorias e métricas, porém não aprofunda como elas se conectam (ex: aquisição de clientes, custo de marketing). O confidence_score aparece, mas sem justificativa clara.
+LangGraph (fluxo de execução)
+Raciocínio mais organizado e progressivo. Avalia métricas como LTV, CAC e ROI de forma conectada, o que dá mais consistência à análise. A estrutura em grafo ajuda a evitar respostas soltas e força uma linha de pensamento mais completa.
+CrewAI (orquestração por papéis)
+Análise mais profunda. A divisão por papéis leva a um raciocínio mais detalhado e bem sustentado. Considera contexto, variáveis e explica melhor como chega na resposta. O resultado é mais consistente do começo ao fim.</li>
+										</ul>
+									<h3>Resultados</h3>
+										<ul>
+											<li>Pydantic: organizado, mas superficial
+											LangGraph: estruturado e mais analítico<br>
+											CrewAI: mais completo e consistente.</li>
+										</ul>
+								</section>
+								<section>
+									<h3>Tecnologias e linguagens utilizadas</h3>
+										<ul>
+											<li>Python, OpenAi, LangGraph, CrewAI, Pydantic, Uvicorn e FastAPI</li>
+										</ul>
+								</section>
+								<section>
+									<h3>Projeto completo em meu GitHub: <a href="https://github.com/ErikHenning927/frameworks-ai" target="_blank" class="icon brands fa-github" title="GitHub"><span class="label">GitHub</span></a></h3>
+								</section>				
+							</article>
 							<!-- Projeto 1-->
 							<article class="col-6 col-12-xsmall work-item">
 								<h2>Construção de um agent de IA utilizando openAi e langchain</h2>
