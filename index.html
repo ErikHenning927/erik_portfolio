@@ -61,7 +61,7 @@
 						<li style="margin-bottom: 16px;"><strong>Engenharia de IA</strong> — Especialista em frameworks
 							modernos de agentes: CrewAI (orquestração de múltiplos agentes), LangGraph (workflows
 							estruturados), LangChain (prompt engineering e RAG), PydanticAI (respostas tipadas).
-							Integração com OpenAI, Gemini e modelos LLM.</li>
+							Integração com OpenAI, Gemini, modelos CLIP e Bancos de Dados Vetoriais (Pinecone).</li>
 						<li style="margin-bottom: 16px;"><strong>Frontend</strong> — React com Vite, TailwindCSS e
 							bibliotecas de componentes (Radix UI). Interface intuitivas e performáticas.</li>
 						<li style="margin-bottom: 16px;"><strong>Integração de Sistemas</strong> — Experiência em
@@ -69,7 +69,7 @@
 							de dados
 							multi-fonte.</li>
 						<li style="margin-bottom: 16px;"><strong>Infraestrutura & DevOps</strong> — Docker, Docker
-							Compose, GCP (Cloud Run), CI/CD (CloudBuild), PostgreSQL e SQL Server.</li>
+							Compose, GCP (Cloud Run), CI/CD (CloudBuild), Nginx (Proxy Reverso), PostgreSQL, SQL Server e Redis.</li>
 					</ul>
 				</div>
 			</div>
@@ -95,8 +95,8 @@
 						<h3><i class="fa-solid fa-brain"></i> Engenharia de IA</h3>
 						<ul>
 							<li>Frameworks (CrewAI, LangGraph, LangChain)</li>
-							<li>Modelos LLMs (OpenAI, Gemini)</li>
-							<li>RAG & Prompt Engineering</li>
+							<li>Modelos LLMs & CLIP (OpenAI, Gemini)</li>
+							<li>RAG, Busca Vetorial & Embeddings</li>
 							<li>PydanticAI para respostas tipadas</li>
 						</ul>
 					</div>
@@ -104,7 +104,7 @@
 					<div class="skill-card">
 						<h3><i class="fa-solid fa-desktop"></i> Frontend</h3>
 						<ul>
-							<li>React & Vite</li>
+							<li>React, Vite & TypeScript</li>
 							<li>TailwindCSS</li>
 							<li>Bibliotecas de Componentes (Radix UI)</li>
 						</ul>
@@ -123,8 +123,8 @@
 						<h3><i class="fa-solid fa-cloud"></i> Infra & Bancos de Dados</h3>
 						<ul>
 							<li>GCP (Cloud Run) & CI/CD (CloudBuild)</li>
-							<li>Docker & Docker Compose</li>
-							<li>PostgreSQL, SQL Server & Redis (Cache)</li>
+							<li>Docker, Docker Compose & Nginx</li>
+							<li>PostgreSQL, SQL Server, Redis & Pinecone</li>
 						</ul>
 					</div>
 
@@ -136,6 +136,30 @@
 		<section id="projects">
 			<div class="container">
 				<h2 class="section-title">Projetos em Destaque</h2>
+
+				<div class="project-card">
+					<img src="images/fulls/project-vectorai.png" alt="VectorAI - Busca Visual" class="project-image" />
+					<div class="project-content">
+						<h3>VectorAI - Busca Visual Inteligente com CLIP e Pinecone</h3>
+						<p>
+							Sistema completo de busca por similaridade visual e detecção de avarias em tempo real. 
+							O projeto utiliza o modelo <strong>CLIP da OpenAI</strong> para transformar imagens em vetores e o <strong>Pinecone</strong> como banco vetorial de alta performance. 
+							Destaque para a arquitetura com <strong>Proxy Reverso Nginx</strong>, que unifica Frontend e Backend para facilitar o deploy e testes em dispositivos móveis sem erros de CORS.
+						</p>
+						<div class="project-tags">
+							<span class="tag">Python</span>
+							<span class="tag">FastAPI</span>
+							<span class="tag">OpenAI CLIP</span>
+							<span class="tag">Pinecone (Vector DB)</span>
+							<span class="tag">React</span>
+							<span class="tag">Nginx & Docker</span>
+						</div>
+						<a href="https://github.com/ErikHenning927/project-vectorai" target="_blank"
+							class="btn">
+							<i class="fa-brands fa-github"></i> Ver no GitHub
+						</a>
+					</div>
+				</div>
 
 				<div class="project-card">
 					<img src="images/fulls/microservice_agent.png" alt="Microservice Agent OCR" class="project-image" />
