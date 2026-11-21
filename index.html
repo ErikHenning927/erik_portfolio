@@ -1,123 +1,388 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Erik Henning — Desenvolvedor Full Stack Sênior & Engenheiro de IA</title>
-  <meta name="description" content="Desenvolvedor Full Stack Sênior especializado em IA e agentes (LangGraph), Python, FastAPI, NestJS, React. Portfólio e projetos." />
-  <meta property="og:title" content="Erik Henning — Portfólio" />
-  <meta property="og:description" content="Portfólio de Erik Henning — Desenvolvedor Full Stack Sênior & Engenheiro de IA." />
-  <meta property="og:image" content="/assets/images/og-image.png" />
-  <link rel="stylesheet" href="assets/css/style.css">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<title>Erik Henning - Portfólio</title>
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+
+	<!-- Font Awesome para Ícones -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+	<!-- Estilo Estilo Apple -->
+	<link rel="stylesheet" href="assets/css/apple-theme.css" />
 </head>
+
 <body>
-  <header class="hero">
-    <div class="container">
-      <h1>Erik Henning</h1>
-      <p>Desenvolvedor Full Stack Sênior | Engenharia de IA & Agentes</p>
-      <a class="btn btn-primary" href="/curriculo_atualizado_pt.pdf" download>Download do Currículo (pt-BR)</a>
-    </div>
-  </header>
 
-  <main class="container">
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <h2>Sobre</h2>
-      <p>Desenvolvedor Full Stack Sênior e Especialista em Inteligência Artificial com ~10 anos de trajetória em tecnologia, focado em arquiteturas distribuídas, orquestração de agentes e soluções em produção.</p>
-    </section>
+	<!-- Navegação Superior -->
+	<nav class="navbar">
+		<div class="nav-content">
+			<a href="#" class="nav-logo">Erik Henning</a>
+			<ul class="nav-links">
+				<li><a href="#about">Sobre</a></li>
+				<li><a href="#skills">Habilidades</a></li>
+				<li><a href="#projects">Projetos</a></li>
+				<li><a href="#certificates">Certificados</a></li>
+				<li><a href="#contact">Contato</a></li>
+			</ul>
+		</div>
+	</nav>
 
-    <!-- EXPERIENCE START -->
-    <section id="experience" class="section">
-      <h2>Experiência</h2>
-      <div class="experience-list">
-        <div class="experience-item">
-          <h3>Desenvolvedor Full Stack Sênior | Inteligência Artificial — Britânia Eletrodomésticos S.A.</h3>
-          <span class="period">Fev 2026 — Atual</span>
-          <ul>
-            <li>Arquitetura e desenvolvimento de automações corporativas com LLMs e microsserviços (FastAPI / NestJS).</li>
-            <li>Integração de sistemas críticos (SAP / VTEX) e pipelines de dados resilientes (Airflow).</li>
-            <li>Implementação de observabilidade e testes para fluxos long‑running baseados em LangGraph.</li>
-          </ul>
-        </div>
-        <div class="experience-item">
-          <h3>Engenheiro de Dados / Desenvolvedor Python Sênior — Condor Super Center LTDA</h3>
-          <span class="period">Dez 2022 — Jan 2024</span>
-          <ul>
-            <li>Extração, padronização e automação de grandes volumes de dados para e‑commerce usando Python e Pandas.</li>
-            <li>Construção de microsserviços e dashboards para KPIs de vendas e operação.</li>
-          </ul>
-        </div>
-        <div class="experience-item">
-          <h3>Desenvolvedor Autônomo — Projetos de Integração e Conciliação</h3>
-          <span class="period">Out 2020 — Dez 2022</span>
-          <ul>
-            <li>Automação de conciliações, integrações VTEX/Shopify e APIs customizadas em Python.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- EXPERIENCE END -->
+	<main>
+		<!-- Seção Hero -->
+		<section class="hero" id="hero">
+			<div class="container">
+				<img src="images/avatar.png" alt="Erik Henning" class="hero-avatar" />
+				<h1>Olá, sou Erik Henning.</h1>
+				<p>Desenvolvedor Full Stack & Especialista em Inteligência Artificial focado na construção de sistemas
+					inteligentes e escaláveis.</p>
+			</div>
+		</section>
 
-    <!-- SKILLS UPDATE START -->
-    <section id="skills" class="section">
-      <h2>Habilidades</h2>
-      <div class="skills-grid">
-        <div>
-          <h4>Inteligência Artificial & Agentes</h4>
-          <p>LangGraph, LangChain, CrewAI, PydanticAI, OpenAI, Google Gemini, RAG, Embeddings (PGVector, Qdrant)</p>
-        </div>
-        <div>
-          <h4>Backend & APIs</h4>
-          <p>Python (FastAPI, Django), Node.js (NestJS), REST, WebSockets, Microsserviços</p>
-        </div>
-        <div>
-          <h4>Cloud, Observabilidade & DevOps</h4>
-          <p>Kubernetes, Docker, ArgoCD, OpenTelemetry, Prometheus, Grafana</p>
-        </div>
-        <div>
-          <h4>Frontend</h4>
-          <p>React, TypeScript, Vite, Tailwind</p>
-        </div>
-        <div>
-          <h4>Engenharia de Dados & Bancos</h4>
-          <p>PostgreSQL, SQL Server, Redis, Apache Airflow, ClickHouse</p>
-        </div>
-      </div>
-    </section>
-    <!-- SKILLS UPDATE END -->
+		<!-- Sobre Mim -->
+		<section id="about">
+			<div class="container">
+				<h2 class="section-title">Sobre Mim</h2>
+				<div class="about-text">
+					<p>
+						Tenho experiência prática em todas as camadas da arquitetura moderna de software: desde
+						frontends
+						responsivos até backends robustos e pipelines de IA de ponta.
+					</p>
+					<br>
+					<p>🔧 <strong>Expertise Técnico:</strong></p>
+					<ul style="list-style: none; padding-left: 0; margin-top: 16px; font-size: 16px;">
+						<li style="margin-bottom: 16px;"><strong>Backend & APIs</strong> — Desenvolvimento com Python
+							(FastAPI, Django, Flask) e Node.js (Fastify, NestJS). Arquitetura RESTful, real-time
+							(Socket.IO), autenticação segura, middleware customizado, ORMs (SQLAlchemy, Django ORM,
+							TypeORM).</li>
+						<li style="margin-bottom: 16px;"><strong>Engenharia de IA</strong> — Especialista em frameworks
+							modernos de agentes: CrewAI (orquestração de múltiplos agentes), LangGraph (workflows
+							estruturados), LangChain (prompt engineering e RAG), PydanticAI (respostas tipadas).
+							Integração com OpenAI, Gemini, modelos CLIP e Bancos de Dados Vetoriais (Pinecone).</li>
+						<li style="margin-bottom: 16px;"><strong>Frontend</strong> — React com Vite, TailwindCSS e
+							bibliotecas de componentes (Radix UI). Interface intuitivas e performáticas.</li>
+						<li style="margin-bottom: 16px;"><strong>Integração de Sistemas</strong> — Experiência em
+							integração complexa com SAP Commerce e VTEX, processamento de eventos webhook, transformação
+							de dados
+							multi-fonte.</li>
+						<li style="margin-bottom: 16px;"><strong>Infraestrutura & DevOps</strong> — Docker, Docker
+							Compose, GCP (Cloud Run), CI/CD (CloudBuild), Nginx (Proxy Reverso), PostgreSQL, SQL Server e Redis.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <h2>Projetos</h2>
+		<!-- Habilidades -->
+		<section id="skills">
+			<div class="container">
+				<h2 class="section-title">Habilidades</h2>
+				<div class="skills-grid">
 
-      <!-- SURUCUCU PROJECT START -->
-      <article class="project-card">
-        <img src="assets/images/surucucu.png" alt="Surucucu — Assistente Pessoal Multi-Agente" class="project-img" />
-        <h3>Surucucu — Assistente Pessoal Multi-Agente de IA</h3>
-        <p>Plataforma multi‑agente com LangGraph, FastAPI, PostgreSQL, Telegram e OpenTelemetry.</p>
-        <ul>
-          <li>Orquestração com checkpoints duráveis (LangGraph) para replay e debugging.</li>
-          <li>Fila durável em PostgreSQL + locks (SELECT FOR UPDATE) e deduplicação em Redis.</li>
-          <li>Observabilidade com OpenTelemetry; bot Telegram com Whisper para voz.</li>
-        </ul>
-        <p><a href="https://github.com/ErikHenning927/surucucu-app" target="_blank" rel="noopener">Ver no GitHub</a></p>
-      </article>
-      <!-- SURUCUCU PROJECT END -->
+					<div class="skill-card">
+						<h3><i class="fa-solid fa-server"></i> Backend & APIs</h3>
+						<ul>
+							<li>Python (FastAPI, Django, Flask)</li>
+							<li>Node.js (Fastify, NestJS)</li>
+							<li>ORMs (SQLAlchemy, TypeORM, Django ORM)</li>
+							<li>APIs RESTful & WebSockets (Socket.IO)</li>
+						</ul>
+					</div>
 
-    </section>
+					<div class="skill-card">
+						<h3><i class="fa-solid fa-brain"></i> Engenharia de IA</h3>
+						<ul>
+							<li>Frameworks (CrewAI, LangGraph, LangChain)</li>
+							<li>Modelos LLMs & CLIP (OpenAI, Gemini)</li>
+							<li>RAG, Busca Vetorial & Embeddings</li>
+							<li>PydanticAI para respostas tipadas</li>
+						</ul>
+					</div>
 
-    <!-- CERTIFICATES -->
-    <section id="certificates" class="section">
-      <h2>Certificações</h2>
-      <p>Engenheiro de Dados (Programa Santander Coders) — Ada Tech; Agentes de IA com Google Gemini — Agents IA; Conceitos Avançados em Python — Asimov Academy</p>
-    </section>
+					<div class="skill-card">
+						<h3><i class="fa-solid fa-desktop"></i> Frontend</h3>
+						<ul>
+							<li>React, Vite & TypeScript</li>
+							<li>TailwindCSS</li>
+							<li>Bibliotecas de Componentes (Radix UI)</li>
+						</ul>
+					</div>
 
-  </main>
+					<div class="skill-card">
+						<h3><i class="fa-solid fa-link"></i> Integração de Sistemas</h3>
+						<ul>
+							<li>SAP Commerce & VTEX</li>
+							<li>Processamento de Webhooks</li>
+							<li>Apache Airflow & Transformação de Dados</li>
+						</ul>
+					</div>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Erik Henning</p>
-    </div>
-  </footer>
+					<div class="skill-card">
+						<h3><i class="fa-solid fa-cloud"></i> Infra & Bancos de Dados</h3>
+						<ul>
+							<li>GCP (Cloud Run) & CI/CD (CloudBuild)</li>
+							<li>Docker, Docker Compose & Nginx</li>
+							<li>PostgreSQL, SQL Server, Redis & Pinecone</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Projetos -->
+		<section id="projects">
+			<div class="container">
+				<h2 class="section-title">Projetos em Destaque</h2>
+
+				<div class="project-card">
+					<img src="images/fulls/ai_engineering.png" alt="AI DataOps Copilot" class="project-image" />
+					<div class="project-content">
+						<h3>AI DataOps Copilot - Engenharia de Dados e Agentes de IA</h3>
+						<p>
+							Plataforma integrada de engenharia de dados em tempo real e orquestração de agentes de IA baseada em <strong>LangGraph</strong> e <strong>FastAPI</strong>. 
+							O sistema implementa captura de dados de mudança (CDC) no <strong>TimescaleDB</strong> usando <strong>Debezium</strong>, transmitindo eventos via <strong>Apache Kafka</strong> para processamento analítico de alto volume no <strong>ClickHouse</strong>. 
+							Agentes de IA são coordenados com fluxos de estado complexos no LangGraph e integrados a bancos vetoriais (<strong>Qdrant</strong>), cache (<strong>Redis</strong>) e observabilidade completa via <strong>Prometheus</strong>, <strong>Loki</strong> e <strong>Grafana</strong>.
+						</p>
+						<div class="project-tags">
+							<span class="tag">LangGraph</span>
+							<span class="tag">FastAPI</span>
+							<span class="tag">Apache Kafka</span>
+							<span class="tag">ClickHouse</span>
+							<span class="tag">TimescaleDB</span>
+							<span class="tag">Qdrant (Vector DB)</span>
+							<span class="tag">Next.js</span>
+							<span class="tag">Grafana & Prometheus</span>
+							<span class="tag">Docker</span>
+						</div>
+						<a href="https://github.com/ErikHenning927/ai_engineering" target="_blank"
+							class="btn">
+							<i class="fa-brands fa-github"></i> Ver no GitHub
+						</a>
+					</div>
+				</div>
+
+				<!-- Inserindo apenas o card Surucucu (preservando layout) -->
+				<div class="project-card">
+					<img src="assets/images/surucucu.png" alt="Surucucu - Assistente Pessoal Multi-Agente" class="project-image" />
+					<div class="project-content">
+						<h3>Surucucu — Assistente Pessoal Multi-Agente de IA</h3>
+						<p>
+							Ecossistema completo de IA pessoal em produção com arquitetura orientada a eventos sobre PostgreSQL (SELECT FOR UPDATE SKIP LOCKED), orquestração multi-agente com LangGraph (finanças, conciliação bancária OFX/PDF, radar de preços, agenda Google/iCal e carreira/LinkedIn HITL), interface Web/Mobile React Native, bot Telegram com voz (Whisper) e observabilidade OpenTelemetry + Grafana.
+						</p>
+						<div class="project-tags">
+							<span class="tag">LangGraph</span>
+							<span class="tag">FastAPI</span>
+							<span class="tag">PostgreSQL</span>
+							<span class="tag">Telegram Bot</span>
+							<span class="tag">OpenTelemetry</span>
+						</div>
+						<a href="https://github.com/ErikHenning927/surucucu-app" target="_blank" class="btn">
+							<i class="fa-brands fa-github"></i> Ver no GitHub
+						</a>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<img src="images/fulls/project-vectorai.png" alt="VectorAI - Busca Visual" class="project-image" />
+					<div class="project-content">
+						<h3>VectorAI - Busca Visual Inteligente com CLIP e Pinecone</h3>
+						<p>
+							Sistema completo de busca por similaridade visual e detecção de avarias em tempo real. 
+							O projeto utiliza o modelo <strong>CLIP da OpenAI</strong> para transformar imagens em vetores e o <strong>Pinecone</strong> como banco vetorial de alta performance. 
+							Destaque para a arquitetura com <strong>Proxy Reverso Nginx</strong>, que unifica Frontend e Backend para facilitar o deploy e testes em dispositivos móveis sem erros de CORS.
+						</p>
+						<div class="project-tags">
+							<span class="tag">Python</span>
+							<span class="tag">FastAPI</span>
+							<span class="tag">OpenAI CLIP</span>
+							<span class="tag">Pinecone (Vector DB)</span>
+							<span class="tag">React</span>
+							<span class="tag">Nginx & Docker</span>
+						</div>
+						<a href="https://github.com/ErikHenning927/project-vectorai" target="_blank"
+							class="btn">
+							<i class="fa-brands fa-github"></i> Ver no GitHub
+						</a>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<img src="images/fulls/microservice_agent.png" alt="Microservice Agent OCR" class="project-image" />
+					<div class="project-content">
+						<h3>Microserviço Extrator de NF (Arquitetura em Camadas)</h3>
+						<p>
+							Microserviço escalável para extração e estruturação de dados de Notas Fiscais usando OCR e
+							IA.
+							O grande diferencial deste projeto é a aplicação rigorosa de <strong>Arquitetura em
+								Camadas</strong>. A camada de <strong>Controllers</strong> atua como o maestro perfeito:
+							recebe as requisições HTTP e orquestra o fluxo de forma limpa entre os serviços (Cache com <strong>Redis</strong>, OCR,
+							AI Extraction), garantindo separação de responsabilidades, código altamente testável e
+							manutenível.
+						</p>
+						<div class="project-tags">
+							<span class="tag">Python</span>
+							<span class="tag">FastAPI</span>
+							<span class="tag">Redis (Caching)</span>
+							<span class="tag">Arquitetura de Software</span>
+							<span class="tag">Controllers</span>
+							<span class="tag">OCR & IA</span>
+						</div>
+						<a href="https://github.com/ErikHenning927/microservice-ai-python-image" target="_blank"
+							class="btn">
+							<i class="fa-brands fa-github"></i> Ver no GitHub
+						</a>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<img src="images/fulls/webhookservice.png" alt="Webhook Service E-commerce" class="project-image" />
+					<div class="project-content">
+						<h3>Serviço de Webhooks e Estruturação de Dados E-commerce</h3>
+						<p>
+							Microserviço de altíssimo desempenho para processamento de webhooks em tempo real de operações de e-commerce. 
+							Projeto baseado em um caso de uso real onde atuei desde a concepção do <strong>Star Schema</strong> e modelagem híbrida do banco de dados (SQL Server) até a implementação final da API. 
+							Utiliza processamento assíncrono (Background Tasks) para responder imediatamente à plataforma parceira, otimização de inserção em lote (<code>fast_executemany</code>) e carga automatizada de dimensões para garantir a integridade da operação.
+						</p>
+						<div class="project-tags">
+							<span class="tag">Python</span>
+							<span class="tag">FastAPI</span>
+							<span class="tag">SQL Server</span>
+							<span class="tag">Modelagem de Dados</span>
+							<span class="tag">Star Schema</span>
+							<span class="tag">Docker</span>
+						</div>
+						<a href="https://github.com/ErikHenning927/webhookservice" target="_blank"
+							class="btn">
+							<i class="fa-brands fa-github"></i> Ver no GitHub
+						</a>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<img src="images/fulls/agent.png" alt="Frameworks IA" class="project-image" />
+					<div class="project-content">
+						<h3>Construção de Agentes com CrewAI, LangGraph e Pydantic</h3>
+						<p>
+							Desenvolvimento de 3 agentes de IA usando abordagens diferentes para comparar como cada um
+							constrói o raciocínio. Avaliação de estruturas baseadas em schema (Pydantic), fluxos de
+							execução (LangGraph) e orquestração por papéis (CrewAI) para análises consistentes de
+							métricas como LTV, CAC e ROI.
+						</p>
+						<div class="project-tags">
+							<span class="tag">Python</span>
+							<span class="tag">OpenAI</span>
+							<span class="tag">LangGraph</span>
+							<span class="tag">CrewAI</span>
+							<span class="tag">FastAPI</span>
+						</div>
+						<a href="https://github.com/ErikHenning927/frameworks-ai" target="_blank" class="btn">
+							<i class="fa-brands fa-github"></i> Ver no GitHub
+						</a>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<img src="images/fulls/ocr_ai_concept.png" alt="Fullstack OCR Image Project"
+						class="project-image" />
+					<div class="project-content">
+						<h3>Fullstack OCR Image Project</h3>
+						<p>
+							Projeto full stack de Reconhecimento Óptico de Caracteres (OCR). Processamento de imagens
+							para extração automática e estruturação de textos utilizando modelos de <strong>Inteligência
+								Artificial (IA)</strong>.
+							Conta com backend robusto para orquestração das análises por IA, <strong>persistência de
+								dados</strong> para armazenamento do histórico e interface de usuário intuitiva para
+							visualização dos resultados.
+						</p>
+						<div class="project-tags">
+							<span class="tag">Python</span>
+							<span class="tag">Inteligência Artificial</span>
+							<span class="tag">LLM</span>
+							<span class="tag">OCR</span>
+							<span class="tag">FastAPI</span>
+							<span class="tag">React</span>
+							<span class="tag">SQLSERVER / DB</span>
+						</div>
+						<a href="https://github.com/ErikHenning927/fullstack-ocr-image-project" target="_blank"
+							class="btn">
+							<i class="fa-brands fa-github"></i> Ver no GitHub
+						</a>
+					</div>
+				</div>
+
+				<div style="text-align: center; margin-top: 40px;">
+					<a href="https://github.com/ErikHenning927" target="_blank" class="btn"
+						style="background: transparent; color: var(--text-color); border: 1px solid var(--border-color);">
+						Explorar todos os projetos no GitHub <i class="fa-solid fa-arrow-right"></i>
+					</a>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- Certificados -->
+		<section id="certificates">
+			<div class="container">
+				<h2 class="section-title">Certificados</h2>
+
+				<div class="cert-list">
+					<div class="cert-item">
+						<span><strong>Ada Tech</strong>: Programa Santander Coders - Engenheiro de Dados</span>
+						<a href="https://github.com/ErikHenning927/certificados/blob/main/certificado_engdados.pdf"
+							target="_blank" class="btn" style="padding: 8px 16px; font-size: 13px;">Ver PDF</a>
+					</div>
+					<div class="cert-item">
+						<span><strong>Agents IA</strong>: Agentes de IA Google</span>
+						<a href="https://github.com/ErikHenning927/certificados/blob/main/Agents%20Google%20Gemini.pdf"
+							target="_blank" class="btn" style="padding: 8px 16px; font-size: 13px;">Ver PDF</a>
+					</div>
+					<div class="cert-item">
+						<span><strong>Udemy</strong>: Python básico ao avançado</span>
+						<a href="https://github.com/ErikHenning927/certificados/blob/main/PythonB%C3%A1sicoaoAvan%C3%A7ado.pdf"
+							target="_blank" class="btn" style="padding: 8px 16px; font-size: 13px;">Ver PDF</a>
+					</div>
+					<div class="cert-item">
+						<span><strong>Asimov Academy</strong>: Web Scraping</span>
+						<a href="https://github.com/ErikHenning927/certificados/blob/main/web-scraping-extraindo-dados-da-web.pdf"
+							target="_blank" class="btn" style="padding: 8px 16px; font-size: 13px;">Ver PDF</a>
+					</div>
+					<div class="cert-item">
+						<span><strong>Asimov Academy</strong>: Análise de dados com Pandas e SQL</span>
+						<a href="https://github.com/ErikHenning927/certificados/blob/main/analisando-dados-com-pandas-sql.pdf"
+							target="_blank" class="btn" style="padding: 8px 16px; font-size: 13px;">Ver PDF</a>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+	</main>
+
+	<!-- Rodapé e Contato -->
+	<footer id="contact">
+		<div class="container">
+			<h2 class="section-title" style="margin-bottom: 24px;">Vamos conversar?</h2>
+			<p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 18px;">Curitiba, PR - Brasil</p>
+
+			<ul class="social-links">
+				<li><a href="mailto:henningerik2@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a></li>
+				<li><a href="https://wa.me/5541985262645" target="_blank" title="WhatsApp"><i
+							class="fa-brands fa-whatsapp"></i></a></li>
+				<li><a href="https://linkedin.com/in/erik-henning" target="_blank" title="LinkedIn"><i
+							class="fa-brands fa-linkedin"></i></a></li>
+				<li><a href="https://github.com/ErikHenning927" target="_blank" title="GitHub"><i
+							class="fa-brands fa-github"></i></a></li>
+			</ul>
+
+			<p style="color: var(--text-secondary); margin-top: 60px; font-size: 14px;">
+				&copy; Erik Henning. Todos os direitos reservados.
+			</p>
+		</div>
+	</footer>
+
 </body>
+
 </html>
