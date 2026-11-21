@@ -1,30 +1,38 @@
-# Surucucu — Assistente Pessoal Multi-Agente de IA
+Surucucu — Assistente Pessoal Multi-Agente de IA
 
-Surucucu é um ecossistema de assistente pessoal multi‑agente projetado para automação de rotinas pessoais e corporativas. A arquitetura prioriza durabilidade, auditabilidade e observabilidade para lidar com fluxos long‑running que envolvem chamadas a LLMs, ingestão de documentos (PDF/OFX), conciliação bancária e integração com serviços externos (Google Calendar, ERPs, APIs de e‑commerce).
+Visão Geral
+-----------
 
-Arquitetura resumida
+Surucucu é uma plataforma full‑stack de assistente pessoal multi‑agente projetada para orquestrar capacidades de LLMs, pipelines de dados e integrações em produção. O objetivo é unir durabilidade de estado, auditabilidade e uma UX human‑in‑the‑loop (Telegram/voz) mantendo custos e latências dentro de limites operacionais.
 
-- API Gateway (FastAPI): entrada única para requests, validação com Pydantic e enfileiramento inicial.
-- Orquestrador (LangGraph): grafos de execução com checkpoints duráveis, replay e políticas de retry/backoff.
-- Agentes isolados por domínio: cada agente implementa uma skill com inputs/outputs tipados via PydanticAI.
-- Mensageria & Persistência: PostgreSQL para state store e fila inicial (SELECT FOR UPDATE SKIP LOCKED), Redis para locks e dedupe, e opcionalmente Kafka para alto throughput.
-- Retrieval & RAG: embeddings armazenados em PGVector/Qdrant, com gating e scoring para seleção de evidências.
-- Observabilidade: OpenTelemetry para traces, Prometheus/Grafana para métricas e logs correlacionados por run_id.
+Arquitetura
+----------
+
+Componentes principais:
+
+- API Gateway (FastAPI): camada de entrada responsável por autenticação, validação (Pydantic) e enfileiramento inicial de comandos.
+- LangGraph: orquestrador de workflow que modela runs como grafos com checkpoints duráveis e capacidade de replay.
+- Agentes/Skills: microserviços independentes que expõem skills tipadas com contratos Pydantic/PydanticAI.
+- Message Bus & Durable Store: PostgreSQL é usado como fila inicial com SELECT FOR UPDATE para locks; Redis para deduplicação e locks leves; para workloads maiores, Kafka é recomendado.
+- Retrieval & RAG: PGVector / Qdrant para embeddings e retrieval; gating de evidências antes de confiança no output do agente.
+- Observabilidade: OpenTelemetry para traces e métricas; Prometheus + Grafana para dashboards; logs estruturados com correlação por run_id.
 
 Decisões e trade‑offs
+--------------------
 
-- Checkpoints duráveis (LangGraph) adicionam latência e custo de storage, mas permitem replay, investigação e redução de reexecuções custosas — indicado para fluxos críticos.
-- Postgres como fila inicial é operacionalmente simples e barato; Kafka se justifica quando o throughput e particionamento forem essenciais.
-- Preferir idempotência e sagas compensatórias em integrações com ERPs (SAP, VTEX) em vez de buscar exactly‑once extremo a nível infra.
-- Paralelismo de agentes aumenta throughput, mas multiplica custos de tokens (LLMs); usar estratégias de agregação/score para reduzir chamadas.
-- Validação forte (PydanticAI) reduz parsing errors e viagens de ida-e-volta com LLMs.
+- Checkpoints duráveis (LangGraph) facilitam replay e debugging, reduzindo custo de rerun, mas aumentam latência e requerem armazenamento adicional.
+- Postgres como fila é uma solução operacionalmente simples para PoCs e tráfego moderado; Kafka ou RabbitMQ surgem ao crescer throughput e necessidade de particionamento.
+- Preferência por idempotência e sagas compensatórias em integrações com ERPs em vez de buscar exactly‑once em nível infra, que é caro.
+- Paralelismo controlado por budget: executar agentes em paralelo melhora throughput, porém multiplica custo de tokens; arquitetar uma estratégia de agregação por score/voting ajuda a equilibrar custo vs qualidade.
 
-Observações operacionais
+Operacional
+----------
 
-- Implementar timeouts por agente, retry budgets e circuit breakers para evitar loops e explosões de custo.
-- Telemetria por run: token_cost, latency por node, success_rate e loop_count.
-- Testes: mocks de LLM em unit tests, replay de logs reais em integração e teste de caos para latência/timeouts.
+- Monitorar token_cost por run, latência por node, e success_rate; definir alertas para regressões (ex.: token_cost +20% ou loop_count anômalo).
+- Fazer canary deployment para modelos LLM e mudanças em nodes críticos.
+- Testes: unit para cada skill (mocks de LLM), integração com replay de runs reais e testes de caos para latência/timeout.
 
-Resultado esperado
+Conclusão
+---------
 
-Um sistema resiliente e auditável, com boa capacidade de investigação de falhas e controle de custos. A complexidade operacional aumenta, mas o trade‑off justifica‑se quando se exige confiança em fluxos long‑running e integrações críticas.
+Surucucu equilibra durabilidade, observabilidade e flexibilidade para PoC → produção. A arquitetura favorece testes e investigação de runs históricos, com trade‑offs de custo e latência que precisam ser monitorados e ajustados conforme o produto escala.
